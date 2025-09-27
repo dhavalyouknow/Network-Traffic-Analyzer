@@ -2,7 +2,7 @@
 
 A lightweight and efficient tool to monitor, capture, and analyze network traffic in real time. This project is designed for learning, research, and security analysis purposes, providing clear insights into network activity.
 
-🚀 Features
+🚀 **Features**
 
 Capture live network packets (using libraries like scapy/socket).
 
@@ -16,7 +16,7 @@ Simple command-line interface (CLI) for easy usage.
 
 Export results to CSV/JSON for further analysis.
 
-📌 Use Cases
+📌 **Use Cases**
 
 Learning how network protocols work.
 
@@ -26,7 +26,7 @@ Developers debugging network communication.
 
 Students practicing cybersecurity and networking concepts.
 
-⚙️ Tech Stack
+⚙️ **Tech Stack**
 
 Language: Python (recommended)
 
@@ -34,7 +34,7 @@ Libraries: Scapy / Socket / Pandas (for data analysis)
 
 OS Support: Linux, macOS, Windows
 
-🛠️ How It Works
+🛠️ **How It Works**
 
 The tool listens on a selected network interface.
 
