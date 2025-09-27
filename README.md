@@ -1,43 +1,31 @@
-# Network Traffic Analyzer
+**🛰️ Network Traffic Analyzer**
 
-A lightweight and efficient tool to monitor, capture, and analyze network traffic in real time. This project is designed for learning, research, and security analysis purposes, providing clear insights into network activity.
+A lightweight Python-based tool to capture, analyze, and log network traffic in real time.
+This project was built to practice network security concepts, protocol analysis, and traffic monitoring, inspired by tools like Wireshark.
 
-🚀 **Features**
+**📌 Features**
 
-Capture live network packets (using libraries like scapy/socket).
+Capture live network packets on a chosen interface.
 
-Filter packets by protocol (TCP, UDP, ICMP, HTTP, etc.).
+Filter traffic by protocol (ICMP, TCP, UDP, DNS, etc.).
 
-Extract source and destination IP addresses, ports, and payload data.
+Extract key details (source IP, destination IP, protocol, packet size).
 
-Real-time packet statistics (sent/received counts, packet sizes, bandwidth usage).
+Export captured packets into CSV/JSON for further analysis.
 
-Simple command-line interface (CLI) for easy usage.
+Display real-time traffic stats on the terminal.
 
-Export results to CSV/JSON for further analysis.
+**🖼️ Demo – Wireshark Validation**
 
-📌 **Use Cases**
+Before implementing the analyzer, I validated packet capture using Wireshark.
+The screenshot below shows ICMP echo requests/replies being captured between a local machine and an external server:
 
-Learning how network protocols work.
+This demonstrates successful detection of packet exchanges, which I later replicated with my Python analyzer.
 
-Security researchers analyzing suspicious traffic.
+**⚙️ How It Works**
 
-Developers debugging network communication.
+The tool listens to a network interface (e.g., wlan0, eth0).
 
-Students practicing cybersecurity and networking concepts.
+Captured packets are inspected for protocol type and IP details.
 
-⚙️ **Tech Stack**
-
-Language: Python (recommended)
-
-Libraries: Scapy / Socket / Pandas (for data analysis)
-
-OS Support: Linux, macOS, Windows
-
-🛠️ **How It Works**
-
-The tool listens on a selected network interface.
-
-Captured packets are decoded to extract key information.
-
-Data is displayed in real time and stored for offline analysis.
+Data is printed live and optionally saved to a file.
