@@ -1,0 +1,8 @@
+from scapy.all import sniff, IP, ICMP
+
+def packet_callback(packet):
+    if packet.haslayer(ICMP):
+        print(f"[ICMP] {packet[IP].src} → {packet[IP].dst} | Length: {len(packet)}")
+
+# Capture first 20 packets
+sniff(prn=packet_callback, count=20)
